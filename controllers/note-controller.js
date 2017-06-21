@@ -1,2 +1,9 @@
-console.log("element")
-document.getElementById('app').innerHTML = "howdy";
+(function(exports) {
+  function NoteContoller(noteList) {
+    this.noteList = noteList;
+  }
+
+  exports.NoteContoller = NoteContoller;
+})(this)
+
+// note = NoteContoller("Favourite drink: seltzer")
