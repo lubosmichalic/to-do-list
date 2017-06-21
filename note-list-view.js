@@ -1,6 +1,5 @@
 NoteListView = function () {
   this.noteList = new NoteList();
-
 }
 
 NoteListView.prototype.HTMLView = function () {
