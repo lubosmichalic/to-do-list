@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/spencerbf/to-do-list#readme",
   "dependencies": {
-    "http-request": "^0.7.0"
+    "http-request": "^0.7.0",
+    "http-server": "^0.10.0"
   }
 }
