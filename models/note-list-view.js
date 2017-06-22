@@ -1,5 +1,6 @@
-NoteListView = function () {
-  this.noteList = new NoteList();
+(function (exports) {
+  function NoteListView (noteList) {
+    this.noteList = noteList;
 }
 
 NoteListView.prototype.HTMLView = function () {
@@ -9,3 +10,7 @@ NoteListView.prototype.HTMLView = function () {
   }
   return string + "</ul>"
 };
+
+exports.NoteListView = NoteListView;
+
+})(this)

@@ -1,9 +1,12 @@
 (function(exports) {
-  function NoteContoller(noteList) {
+  function NoteController(noteList) {
     this.noteList = noteList;
+    this.noteListView = new NoteListView(noteList);
   }
 
-  exports.NoteContoller = NoteContoller;
-})(this)
+  NoteController.prototype.updateHtml = function(element) {
+    element.innerHTML = this.noteListView.HTMLView();
+  }
 
-// note = NoteContoller("Favourite drink: seltzer")
+  exports.NoteController = NoteController;
+})(this)
