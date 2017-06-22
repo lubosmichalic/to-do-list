@@ -6,7 +6,7 @@
 NoteListView.prototype.HTMLView = function () {
   var string = "<ul>";
   for (var i = 0; i < this.noteList.list.length; i++) {
-    string += "<li><div>" + this.noteList.list +"</div></li>"
+    string += "<li><div>" + this.noteList.list[i] +"</div></li>"
   }
   return string + "</ul>"
 };
