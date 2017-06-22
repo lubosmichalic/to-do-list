@@ -8,5 +8,8 @@
     element.innerHTML = this.noteListView.HTMLView();
   }
 
+  NoteController.prototype.updateSingle = function(element) {
+    element.innerHTML = singleNoteView.printHTML();
+  }
   exports.NoteController = NoteController;
 })(this)

@@ -10,6 +10,6 @@ noteList.addNote("Dave");
 var noteController = new NoteController(noteList);
 noteController.updateHtml(app);
 
-var note = new Note("I heart JavaScript");
-var singleNoteView = new SingleNoteView(note);
-singleNoteView.printHTML();
+var singleNoteView = new SingleNoteView(noteList.list[3]);
+
+noteController.updateSingle(single);

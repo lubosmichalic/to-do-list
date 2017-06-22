@@ -5,14 +5,9 @@
   }
 
     SingleNoteView.prototype.printHTML = function() {
-      return `<div>${this.note.text}</div>`;
+      return `<div>${this.note}</div>`;
     }
 
 
   exports.SingleNoteView = SingleNoteView;
 })(this)
-
-
-NoteController.prototype.updateHtml = function(element) {
-  element.innerHTML = this.noteListView.HTMLView();
-}
