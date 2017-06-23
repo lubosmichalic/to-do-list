@@ -11,11 +11,25 @@ function testNoteControllerUpdatesInnerHTML() {
 
   var appDouble = new AppDouble();
   var noteList = new NoteList();
-  noteList.addNote("Favourite drink: seltzer")
+  noteList.addNote("Fav drink: seltzer")
   var noteController = new NoteController(noteList);
   noteController.updateHtml(appDouble);
-  assert.isTrue(appDouble.innerHTML === "<ul><li><div>Favourite drink: seltzer</div></li></ul>")
+  assert.isTrue(appDouble.innerHTML === "<ul><li><div>Fav drink: seltzer</div></li></ul>")
 }
 
+function testNoteControllerUpdatesInnerHTMLWithAStringLongerThan20Chars() {
+console.log('testNoteControllerUpdatesInnerHTMLWithAStringLongerThan20Chars')
+  function AppDouble() {
+    this.innerHTML = null
+  }
+
+  var appDouble = new AppDouble();
+  var noteList = new NoteList();
+  noteList.addNote("My absolute favourite drink: seltzer")
+  var noteController = new NoteController(noteList);
+  noteController.updateHtml(appDouble);
+  assert.isTrue(appDouble.innerHTML === "<ul><li><div>My absolute favourit...</div></li></ul>")
+}
 testNoteControllerCanBeInstantiated();
 testNoteControllerUpdatesInnerHTML();
+testNoteControllerUpdatesInnerHTMLWithAStringLongerThan20Chars();
